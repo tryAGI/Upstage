@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <Description>C# SDK for the Upstage API -- Solar LLM, embeddings, document parsing, OCR, and groundedness check.</Description>
+    <PackageTags>upstage;solar;llm;chat-completion;embeddings;document-ai;ocr;ai;sdk;csharp;dotnet;openapi;autosdk</PackageTags>
+  </PropertyGroup>
+
+</Project>

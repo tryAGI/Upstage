@@ -285,6 +285,7 @@ namespace Upstage
             string targetLang,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Upstage.TranslationRequest
             {
                 Model = model,

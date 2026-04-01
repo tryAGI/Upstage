@@ -369,7 +369,6 @@ namespace Upstage
             global::Upstage.OneOf<global::Upstage.ChatCompletionRequestToolChoice?, global::Upstage.ChatCompletionNamedToolChoice>? toolChoice = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Upstage.ChatCompletionRequest
             {
                 Model = model,

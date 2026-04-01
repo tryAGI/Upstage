@@ -278,7 +278,6 @@ namespace Upstage
             global::Upstage.OneOf<string, global::System.Collections.Generic.IList<string>> input,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Upstage.EmbeddingRequest
             {
                 Model = model,

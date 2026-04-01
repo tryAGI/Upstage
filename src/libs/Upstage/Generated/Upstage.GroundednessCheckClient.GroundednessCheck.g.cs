@@ -283,7 +283,6 @@ namespace Upstage
             string? model = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Upstage.GroundednessCheckRequest
             {
                 Context = context,

@@ -5,6 +5,25 @@ namespace Upstage
 {
     public partial class DocumentAIClient
     {
+
+
+        private static readonly global::Upstage.EndPointSecurityRequirement s_DocumentOcrSecurityRequirement0 =
+            new global::Upstage.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Upstage.EndPointAuthorizationRequirement[]
+                {                    new global::Upstage.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Upstage.EndPointSecurityRequirement[] s_DocumentOcrSecurityRequirements =
+            new global::Upstage.EndPointSecurityRequirement[]
+            {                s_DocumentOcrSecurityRequirement0,
+            };
         partial void PrepareDocumentOcrArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Upstage.DocumentOcrRequest request);
@@ -43,9 +62,15 @@ namespace Upstage
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Upstage.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DocumentOcrSecurityRequirements,
+                operationName: "DocumentOcrAsync");
+
             var __pathBuilder = new global::Upstage.PathBuilder(
                 path: "/document-ai/ocr",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -55,7 +80,7 @@ namespace Upstage
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

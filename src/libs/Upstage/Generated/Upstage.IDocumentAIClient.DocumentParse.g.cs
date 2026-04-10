@@ -11,11 +11,13 @@ namespace Upstage
         /// individual elements like paragraphs, tables, figures, and headings.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Upstage.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Upstage.DocumentParseResponse> DocumentParseAsync(
 
             global::Upstage.DocumentParseRequest request,
+            global::Upstage.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Parse document<br/>
@@ -57,6 +59,7 @@ namespace Upstage
         /// <param name="modelParams">
         /// JSON string of additional model parameters.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Upstage.DocumentParseResponse> DocumentParseAsync(
@@ -69,6 +72,7 @@ namespace Upstage
             int? pageStart = default,
             int? pageEnd = default,
             string? modelParams = default,
+            global::Upstage.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

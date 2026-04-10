@@ -11,11 +11,13 @@ namespace Upstage
         /// Compatible with OpenAI chat completions API format.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Upstage.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Upstage.ChatCompletionResponse> CreateChatCompletionAsync(
 
             global::Upstage.ChatCompletionRequest request,
+            global::Upstage.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create chat completion<br/>
@@ -71,6 +73,7 @@ namespace Upstage
         /// <param name="toolChoice">
         /// Controls which (if any) tool is called by the model.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Upstage.ChatCompletionResponse> CreateChatCompletionAsync(
@@ -88,6 +91,7 @@ namespace Upstage
             global::Upstage.ResponseFormat? responseFormat = default,
             global::System.Collections.Generic.IList<global::Upstage.ChatCompletionTool>? tools = default,
             global::Upstage.OneOf<global::Upstage.ChatCompletionRequestToolChoice?, global::Upstage.ChatCompletionNamedToolChoice>? toolChoice = default,
+            global::Upstage.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

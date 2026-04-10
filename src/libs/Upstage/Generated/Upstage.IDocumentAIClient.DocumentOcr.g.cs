@@ -11,11 +11,13 @@ namespace Upstage
         /// Supports PDF and image files.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Upstage.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Upstage.OcrResponse> DocumentOcrAsync(
 
             global::Upstage.DocumentOcrRequest request,
+            global::Upstage.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Document OCR<br/>
@@ -34,12 +36,14 @@ namespace Upstage
         /// Default: ocr<br/>
         /// Default Value: ocr
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Upstage.OcrResponse> DocumentOcrAsync(
             byte[] document,
             string documentname,
             string? model = default,
+            global::Upstage.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -25,6 +25,7 @@ namespace Upstage
             Authorizations.Add(new global::Upstage.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "BearerAuth",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

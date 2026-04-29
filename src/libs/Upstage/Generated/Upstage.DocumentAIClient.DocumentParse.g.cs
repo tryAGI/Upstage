@@ -121,6 +121,34 @@ namespace Upstage
             }
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
                             var __contentDocument = new global::System.Net.Http.ByteArrayContent(request.Document ?? global::System.Array.Empty<byte>());
+                            __contentDocument.Headers.ContentType = new global::System.Net.Http.Headers.MediaTypeHeaderValue(
+                                request.Documentname is null
+                                    ? "application/octet-stream"
+                                    : (global::System.IO.Path.GetExtension(request.Documentname) ?? string.Empty).ToLowerInvariant() switch
+                                    {
+                                        ".aac" => "audio/aac",
+                                        ".flac" => "audio/flac",
+                                        ".gif" => "image/gif",
+                                        ".jpeg" => "image/jpeg",
+                                        ".jpg" => "image/jpeg",
+                                        ".json" => "application/json",
+                                        ".m4a" => "audio/mp4",
+                                        ".mp3" => "audio/mpeg",
+                                        ".mp4" => "video/mp4",
+                                        ".mpeg" => "audio/mpeg",
+                                        ".mpga" => "audio/mpeg",
+                                        ".oga" => "audio/ogg",
+                                        ".ogg" => "audio/ogg",
+                                        ".opus" => "audio/ogg",
+                                        ".pdf" => "application/pdf",
+                                        ".png" => "image/png",
+                                        ".txt" => "text/plain",
+                                        ".wav" => "audio/wav",
+                                        ".weba" => "audio/webm",
+                                        ".webm" => "video/webm",
+                                        ".webp" => "image/webp",
+                                        _ => "application/octet-stream",
+                                    });
                             __httpRequestContent.Add(
                                 content: __contentDocument,
                                 name: "\"document\"",
@@ -133,49 +161,49 @@ namespace Upstage
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Model}"),
+                                    content: new global::System.Net.Http.StringContent(request.Model ?? string.Empty),
                                     name: "\"model\"");
                             } 
                             if (request.Ocr != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Ocr?.ToValueString()}"),
+                                    content: new global::System.Net.Http.StringContent((request.Ocr).HasValue ? (request.Ocr).GetValueOrDefault().ToValueString() : string.Empty),
                                     name: "\"ocr\"");
                             } 
                             if (request.Coordinates != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Coordinates}"),
+                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(request.Coordinates, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"coordinates\"");
                             } 
                             if (request.OutputFormats != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.OutputFormats}"),
+                                    content: new global::System.Net.Http.StringContent(request.OutputFormats ?? string.Empty),
                                     name: "\"output_formats\"");
                             } 
                             if (request.PageStart != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.PageStart}"),
+                                    content: new global::System.Net.Http.StringContent(global::System.Convert.ToString(request.PageStart, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty),
                                     name: "\"page_start\"");
                             } 
                             if (request.PageEnd != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.PageEnd}"),
+                                    content: new global::System.Net.Http.StringContent(global::System.Convert.ToString(request.PageEnd, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty),
                                     name: "\"page_end\"");
                             } 
                             if (request.ModelParams != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.ModelParams}"),
+                                    content: new global::System.Net.Http.StringContent(request.ModelParams ?? string.Empty),
                                     name: "\"model_params\"");
                             }
                             __httpRequest.Content = __httpRequestContent;

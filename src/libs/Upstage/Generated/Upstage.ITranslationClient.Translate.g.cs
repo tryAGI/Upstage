@@ -23,6 +23,20 @@ namespace Upstage
         /// Translates text between languages using Solar translation models.<br/>
         /// Supports English-Korean (solar-1-mini-translate-enko) and other language pairs.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Upstage.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Upstage.AutoSDKHttpResponse<global::Upstage.TranslationResponse>> TranslateAsResponseAsync(
+
+            global::Upstage.TranslationRequest request,
+            global::Upstage.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Translate text<br/>
+        /// Translates text between languages using Solar translation models.<br/>
+        /// Supports English-Korean (solar-1-mini-translate-enko) and other language pairs.
+        /// </summary>
         /// <param name="model">
         /// The model to use for translation.<br/>
         /// Default: solar-1-mini-translate-enko<br/>

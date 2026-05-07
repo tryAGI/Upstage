@@ -40,7 +40,9 @@ public partial class UpstageClient : Meai.IEmbeddingGenerator<string, Meai.Embed
                 : new OneOf<string, IList<string>>(textList),
         };
 
-        var response = await Embeddings.CreateEmbeddingAsync(request, cancellationToken).ConfigureAwait(false);
+        var response = await Embeddings.CreateEmbeddingAsync(
+            request: request,
+            cancellationToken: cancellationToken).ConfigureAwait(false);
 
         var embeddings = new Meai.GeneratedEmbeddings<Meai.Embedding<float>>();
 

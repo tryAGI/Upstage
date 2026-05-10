@@ -146,5 +146,6 @@ namespace Upstage
         public DocumentParseRequest()
         {
         }
+
     }
 }

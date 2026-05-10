@@ -83,5 +83,6 @@ namespace Upstage
         public TranslationRequest()
         {
         }
+
     }
 }

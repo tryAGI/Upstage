@@ -71,5 +71,6 @@ namespace Upstage
         public ToolCallChunk()
         {
         }
+
     }
 }

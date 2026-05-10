@@ -107,5 +107,6 @@ namespace Upstage
         public ChatCompletionResponse()
         {
         }
+
     }
 }

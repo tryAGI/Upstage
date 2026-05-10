@@ -52,5 +52,6 @@ namespace Upstage
         public ChatCompletionTool()
         {
         }
+
     }
 }

@@ -85,5 +85,6 @@ namespace Upstage
         public OcrPage()
         {
         }
+
     }
 }

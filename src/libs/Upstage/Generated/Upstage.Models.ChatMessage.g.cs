@@ -89,5 +89,6 @@ namespace Upstage
         public ChatMessage()
         {
         }
+
     }
 }

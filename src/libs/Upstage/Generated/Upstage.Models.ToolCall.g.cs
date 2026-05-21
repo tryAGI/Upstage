@@ -64,5 +64,6 @@ namespace Upstage
         public ToolCall()
         {
         }
+
     }
 }

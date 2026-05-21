@@ -70,5 +70,6 @@ namespace Upstage
         public DocumentParseResponse()
         {
         }
+
     }
 }

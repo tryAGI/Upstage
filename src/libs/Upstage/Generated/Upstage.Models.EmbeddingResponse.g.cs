@@ -73,5 +73,6 @@ namespace Upstage
         public EmbeddingResponse()
         {
         }
+
     }
 }

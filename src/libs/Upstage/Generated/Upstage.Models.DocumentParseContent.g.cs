@@ -74,5 +74,6 @@ namespace Upstage
         public DocumentParseContent()
         {
         }
+
     }
 }

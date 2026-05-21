@@ -55,5 +55,6 @@ namespace Upstage
         public ChatContentPartImageUrl()
         {
         }
+
     }
 }

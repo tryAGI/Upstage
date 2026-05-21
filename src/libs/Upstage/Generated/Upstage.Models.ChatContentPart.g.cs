@@ -65,5 +65,6 @@ namespace Upstage
         public ChatContentPart()
         {
         }
+
     }
 }

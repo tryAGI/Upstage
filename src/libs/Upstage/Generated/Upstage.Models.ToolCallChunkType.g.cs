@@ -4,12 +4,12 @@
 namespace Upstage
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ToolCallChunkType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

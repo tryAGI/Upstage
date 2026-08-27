@@ -9,7 +9,7 @@ namespace Upstage
     public enum ChatCompletionToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

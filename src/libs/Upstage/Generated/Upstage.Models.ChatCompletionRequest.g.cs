@@ -4,7 +4,7 @@
 namespace Upstage
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatCompletionRequest
     {
@@ -87,7 +87,7 @@ namespace Upstage
         public double? PresencePenalty { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("response_format")]
         public global::Upstage.ResponseFormat? ResponseFormat { get; set; }

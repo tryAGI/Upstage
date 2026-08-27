@@ -4,7 +4,7 @@
 namespace Upstage
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ToolCallChunk
     {
@@ -21,14 +21,14 @@ namespace Upstage
         public string? Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Upstage.JsonConverters.ToolCallChunkTypeJsonConverter))]
         public global::Upstage.ToolCallChunkType? Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("function")]
         public global::Upstage.ToolCallChunkFunction? Function { get; set; }

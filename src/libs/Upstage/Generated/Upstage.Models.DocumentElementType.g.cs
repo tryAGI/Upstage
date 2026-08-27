@@ -9,43 +9,43 @@ namespace Upstage
     public enum DocumentElementType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Caption,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chart,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Equation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Figure,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Footer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Header,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Heading,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         List,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Paragraph,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Table,
     }

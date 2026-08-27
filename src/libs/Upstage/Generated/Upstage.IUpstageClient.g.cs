@@ -43,33 +43,33 @@ namespace Upstage
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatClient Chat { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DocumentAIClient DocumentAI { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EmbeddingsClient Embeddings { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public GroundednessCheckClient GroundednessCheck { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranslationClient Translation { get; }
 

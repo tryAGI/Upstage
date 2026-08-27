@@ -9,7 +9,7 @@ namespace Upstage
     public enum EmbeddingResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         List,
     }

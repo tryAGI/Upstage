@@ -4,7 +4,7 @@
 namespace Upstage
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OcrResponse
     {
@@ -33,7 +33,7 @@ namespace Upstage
         public global::System.Collections.Generic.IList<global::Upstage.OcrPage>? Pages { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usage")]
         public global::Upstage.OcrUsage? Usage { get; set; }

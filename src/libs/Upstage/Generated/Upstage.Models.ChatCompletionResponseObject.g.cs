@@ -9,7 +9,7 @@ namespace Upstage
     public enum ChatCompletionResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatCompletion,
     }

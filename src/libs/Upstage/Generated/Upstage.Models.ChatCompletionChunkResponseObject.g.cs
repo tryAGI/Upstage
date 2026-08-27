@@ -9,7 +9,7 @@ namespace Upstage
     public enum ChatCompletionChunkResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatCompletionChunk,
     }

@@ -9,7 +9,7 @@ namespace Upstage
     public enum ChatCompletionDeltaRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
     }

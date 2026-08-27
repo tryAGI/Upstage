@@ -9,7 +9,7 @@ namespace Upstage
     public enum EmbeddingDataObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Embedding,
     }

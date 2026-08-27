@@ -9,11 +9,11 @@ namespace Upstage
     public enum ChatContentPartType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageUrl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

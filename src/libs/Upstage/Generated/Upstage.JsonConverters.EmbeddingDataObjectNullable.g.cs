@@ -20,7 +20,7 @@ namespace Upstage.JsonConverters
                     {
                         return global::Upstage.EmbeddingDataObjectExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

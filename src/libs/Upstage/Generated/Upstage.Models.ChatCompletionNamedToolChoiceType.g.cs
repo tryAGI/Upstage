@@ -4,12 +4,12 @@
 namespace Upstage
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ChatCompletionNamedToolChoiceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

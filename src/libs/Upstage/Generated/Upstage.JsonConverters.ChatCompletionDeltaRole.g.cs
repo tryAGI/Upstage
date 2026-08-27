@@ -20,7 +20,7 @@ namespace Upstage.JsonConverters
                     {
                         return global::Upstage.ChatCompletionDeltaRoleExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

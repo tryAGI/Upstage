@@ -9,7 +9,7 @@ namespace Upstage
     public enum ToolCallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

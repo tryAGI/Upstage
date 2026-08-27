@@ -11,11 +11,11 @@ namespace Upstage
     public enum DocumentParseRequestOcr
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Force,
     }

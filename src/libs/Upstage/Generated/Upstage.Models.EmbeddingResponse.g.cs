@@ -4,7 +4,7 @@
 namespace Upstage
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class EmbeddingResponse
     {
@@ -28,7 +28,7 @@ namespace Upstage
         public string? Model { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usage")]
         public global::Upstage.EmbeddingUsage? Usage { get; set; }

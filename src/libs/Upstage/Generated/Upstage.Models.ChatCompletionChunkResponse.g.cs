@@ -4,7 +4,7 @@
 namespace Upstage
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatCompletionChunkResponse
     {
@@ -41,7 +41,7 @@ namespace Upstage
         public global::System.Collections.Generic.IList<global::Upstage.ChatCompletionChunkChoice>? Choices { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usage")]
         public global::Upstage.Usage? Usage { get; set; }

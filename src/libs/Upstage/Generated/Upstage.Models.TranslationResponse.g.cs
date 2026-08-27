@@ -4,12 +4,12 @@
 namespace Upstage
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TranslationResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output")]
         public global::Upstage.TranslationResponseOutput? Output { get; set; }

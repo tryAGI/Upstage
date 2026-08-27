@@ -4,7 +4,7 @@
 namespace Upstage
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatCompletionChunkChoice
     {
@@ -15,7 +15,7 @@ namespace Upstage
         public int? Index { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("delta")]
         public global::Upstage.ChatCompletionDelta? Delta { get; set; }

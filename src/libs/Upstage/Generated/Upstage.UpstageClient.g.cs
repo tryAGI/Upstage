@@ -41,7 +41,7 @@ namespace Upstage
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Upstage.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -51,7 +51,7 @@ namespace Upstage
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatClient Chat => new ChatClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -60,7 +60,7 @@ namespace Upstage
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DocumentAIClient DocumentAI => new DocumentAIClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -69,7 +69,7 @@ namespace Upstage
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EmbeddingsClient Embeddings => new EmbeddingsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -78,7 +78,7 @@ namespace Upstage
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public GroundednessCheckClient GroundednessCheck => new GroundednessCheckClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -87,7 +87,7 @@ namespace Upstage
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranslationClient Translation => new TranslationClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

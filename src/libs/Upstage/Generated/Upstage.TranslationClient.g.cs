@@ -34,7 +34,7 @@ namespace Upstage
         /// <inheritdoc/>
         public global::Upstage.AutoSDKClientOptions Options { get; }
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Upstage.SourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Upstage.TranslationSourceGenerationContext.Default);
 
         /// <summary>
         ///

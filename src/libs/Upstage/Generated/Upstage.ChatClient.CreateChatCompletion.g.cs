@@ -84,6 +84,23 @@ namespace Upstage
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
+            request = new global::Upstage.ChatCompletionRequest
+            {
+                Model = request.Model,
+                Messages = request.Messages,
+                Temperature = request.Temperature,
+                TopP = request.TopP,
+                MaxTokens = request.MaxTokens,
+                Stop = request.Stop,
+                Stream = false,
+                N = request.N,
+                Seed = request.Seed,
+                FrequencyPenalty = request.FrequencyPenalty,
+                PresencePenalty = request.PresencePenalty,
+                ResponseFormat = request.ResponseFormat,
+                Tools = request.Tools,
+                ToolChoice = request.ToolChoice,
+            };
             PrepareArguments(
                 client: HttpClient);
             PrepareCreateChatCompletionArguments(
@@ -128,6 +145,10 @@ namespace Upstage
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
                 __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
+
+                __httpRequest.Headers.TryAddWithoutValidation(
+                    "Accept",
+                    "application/json");
 
             foreach (var __authorization in __authorizations)
             {
@@ -576,10 +597,6 @@ namespace Upstage
         /// <param name="stop">
         /// Up to 4 sequences where the API will stop generating further tokens.
         /// </param>
-        /// <param name="stream">
-        /// If true, partial message deltas will be sent as server-sent events.<br/>
-        /// Default Value: false
-        /// </param>
         /// <param name="n">
         /// How many chat completion choices to generate for each input message.<br/>
         /// Default Value: 1
@@ -612,7 +629,6 @@ namespace Upstage
             double? topP = default,
             int? maxTokens = default,
             global::Upstage.OneOf<string, global::System.Collections.Generic.IList<string>>? stop = default,
-            bool? stream = default,
             int? n = default,
             int? seed = default,
             double? frequencyPenalty = default,
@@ -631,7 +647,7 @@ namespace Upstage
                 TopP = topP,
                 MaxTokens = maxTokens,
                 Stop = stop,
-                Stream = stream,
+                Stream = false,
                 N = n,
                 Seed = seed,
                 FrequencyPenalty = frequencyPenalty,

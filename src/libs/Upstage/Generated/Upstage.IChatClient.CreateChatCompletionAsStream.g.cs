@@ -1,0 +1,92 @@
+#nullable enable
+
+namespace Upstage
+{
+    public partial interface IChatClient
+    {
+        /// <summary>
+        /// Create chat completion<br/>
+        /// Creates a model response for the given chat conversation.<br/>
+        /// Supports Solar Pro, Solar Mini, and Solar Mini JA models.<br/>
+        /// Compatible with OpenAI chat completions API format.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Upstage.ApiException"></exception>
+        global::System.Collections.Generic.IAsyncEnumerable<global::Upstage.ChatCompletionChunkResponse> CreateChatCompletionAsStreamAsync(
+
+            global::Upstage.ChatCompletionRequest request,
+            global::Upstage.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create chat completion<br/>
+        /// Creates a model response for the given chat conversation.<br/>
+        /// Supports Solar Pro, Solar Mini, and Solar Mini JA models.<br/>
+        /// Compatible with OpenAI chat completions API format.
+        /// </summary>
+        /// <param name="model">
+        /// The model to use for chat completion.<br/>
+        /// Available models: solar-pro, solar-mini, solar-mini-ja<br/>
+        /// Example: solar-pro
+        /// </param>
+        /// <param name="messages">
+        /// A list of messages comprising the conversation so far.
+        /// </param>
+        /// <param name="temperature">
+        /// Sampling temperature between 0 and 2. Higher values make output more random.<br/>
+        /// Default Value: 1.0
+        /// </param>
+        /// <param name="topP">
+        /// Nucleus sampling parameter. Only tokens with top_p probability mass are considered.<br/>
+        /// Default Value: 1.0
+        /// </param>
+        /// <param name="maxTokens">
+        /// Maximum number of tokens to generate in the response.
+        /// </param>
+        /// <param name="stop">
+        /// Up to 4 sequences where the API will stop generating further tokens.
+        /// </param>
+        /// <param name="n">
+        /// How many chat completion choices to generate for each input message.<br/>
+        /// Default Value: 1
+        /// </param>
+        /// <param name="seed">
+        /// If specified, the system will make a best effort to sample deterministically.
+        /// </param>
+        /// <param name="frequencyPenalty">
+        /// Penalizes new tokens based on their existing frequency in the text so far.<br/>
+        /// Default Value: 0
+        /// </param>
+        /// <param name="presencePenalty">
+        /// Penalizes new tokens based on whether they appear in the text so far.<br/>
+        /// Default Value: 0
+        /// </param>
+        /// <param name="responseFormat"></param>
+        /// <param name="tools">
+        /// A list of tools the model may call.
+        /// </param>
+        /// <param name="toolChoice">
+        /// Controls which (if any) tool is called by the model.
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Collections.Generic.IAsyncEnumerable<global::Upstage.ChatCompletionChunkResponse> CreateChatCompletionAsStreamAsync(
+            string model,
+            global::System.Collections.Generic.IList<global::Upstage.ChatMessage> messages,
+            double? temperature = default,
+            double? topP = default,
+            int? maxTokens = default,
+            global::Upstage.OneOf<string, global::System.Collections.Generic.IList<string>>? stop = default,
+            int? n = default,
+            int? seed = default,
+            double? frequencyPenalty = default,
+            double? presencePenalty = default,
+            global::Upstage.ResponseFormat? responseFormat = default,
+            global::System.Collections.Generic.IList<global::Upstage.ChatCompletionTool>? tools = default,
+            global::Upstage.OneOf<global::Upstage.ChatCompletionRequestToolChoice?, global::Upstage.ChatCompletionNamedToolChoice>? toolChoice = default,
+            global::Upstage.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

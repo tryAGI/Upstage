@@ -62,10 +62,6 @@ namespace Upstage
         /// <param name="stop">
         /// Up to 4 sequences where the API will stop generating further tokens.
         /// </param>
-        /// <param name="stream">
-        /// If true, partial message deltas will be sent as server-sent events.<br/>
-        /// Default Value: false
-        /// </param>
         /// <param name="n">
         /// How many chat completion choices to generate for each input message.<br/>
         /// Default Value: 1
@@ -98,7 +94,6 @@ namespace Upstage
             double? topP = default,
             int? maxTokens = default,
             global::Upstage.OneOf<string, global::System.Collections.Generic.IList<string>>? stop = default,
-            bool? stream = default,
             int? n = default,
             int? seed = default,
             double? frequencyPenalty = default,
